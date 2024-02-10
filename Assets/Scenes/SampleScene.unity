@@ -168,6 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamAxisTransform: {fileID: 600653928}
   RotationSpeed: 550
+  MinAngle: -10
+  MaxAngle: 30
 --- !u!1 &600653927
 GameObject:
   m_ObjectHideFlags: 0
