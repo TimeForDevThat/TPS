@@ -9,9 +9,12 @@ public class PlayerController : MonoBehaviour
     public float JumpForce = 4;
     public float Speed;
     private Vector3 _moveVector;
+    private Animator _animator;
+    public GameObject PlayerModel;
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
+        _animator = PlayerModel.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,13 +32,17 @@ public class PlayerController : MonoBehaviour
     {
 
         _moveVector = Vector3.zero;
+        _animator.SetBool("RunForward", false);
+        _animator.SetBool("RunRight", false);
         if (Input.GetKey(KeyCode.W))
         {
             _moveVector += transform.forward;
+            _animator.SetBool("RunForward", true);
         }
         if (Input.GetKey(KeyCode.D))
         {
             _moveVector += transform.right;
+            _animator.SetBool("RunRight", true);
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -48,7 +55,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
             _fallVelocity = -JumpForce;
-            Debug.Log("jump");
         }
     }
 }
