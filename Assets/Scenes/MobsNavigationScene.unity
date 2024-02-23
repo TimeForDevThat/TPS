@@ -777,6 +777,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1210131404 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2542691688944656858, guid: a101263fd7b4e644486a6d27d8cfd167,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958491461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1255490999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,6 +1791,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2952668944826066777, guid: a101263fd7b4e644486a6d27d8cfd167,
+        type: 3}
+      propertyPath: BallPrefab
+      value: 
+      objectReference: {fileID: 7725688456450188728, guid: 9c3df0e3907d2754992798f265574702,
+        type: 3}
+    - target: {fileID: 2952668944826066777, guid: a101263fd7b4e644486a6d27d8cfd167,
+        type: 3}
+      propertyPath: BallCastPoint
+      value: 
+      objectReference: {fileID: 1210131404}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a101263fd7b4e644486a6d27d8cfd167, type: 3}
 --- !u!1 &2002234200

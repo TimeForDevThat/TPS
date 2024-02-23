@@ -2,7 +2,6 @@
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
     private float _fallVelocity = 0;
     public float Gravity = 9.8f;
     private CharacterController _characterController;
@@ -17,7 +16,6 @@ public class PlayerController : MonoBehaviour
         _animator = PlayerModel.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         _characterController.Move(_moveVector * Speed * Time.fixedDeltaTime);
