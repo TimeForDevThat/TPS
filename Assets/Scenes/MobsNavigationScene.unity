@@ -307,6 +307,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153956473}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!20 &197051709 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2875813240600187704, guid: a101263fd7b4e644486a6d27d8cfd167,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958491461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &267440874
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +417,8 @@ GameObject:
   - component: {fileID: 306053432}
   - component: {fileID: 306053431}
   - component: {fileID: 306053430}
+  - component: {fileID: 306053433}
+  - component: {fileID: 306053434}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -473,6 +481,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &306053433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306053429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfdfd610b13daa4b90bf518366f2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 100
+--- !u!136 &306053434
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306053429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.38458347
+  m_Height: 1.7281967
+  m_Direction: 1
+  m_Center: {x: -0.024243116, y: 0.9488409, z: 0.03255987}
 --- !u!114 &626918517 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2875813240927139563, guid: a101263fd7b4e644486a6d27d8cfd167,
@@ -1731,6 +1766,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1967825294530943880, guid: a101263fd7b4e644486a6d27d8cfd167,
+        type: 3}
+      propertyPath: AimPoint
+      value: 
+      objectReference: {fileID: 2132664986}
+    - target: {fileID: 1967825294530943880, guid: a101263fd7b4e644486a6d27d8cfd167,
+        type: 3}
+      propertyPath: CameraLink
+      value: 
+      objectReference: {fileID: 197051709}
+    - target: {fileID: 1967825294530943880, guid: a101263fd7b4e644486a6d27d8cfd167,
+        type: 3}
+      propertyPath: SkyPointDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2875813240927139541, guid: a101263fd7b4e644486a6d27d8cfd167,
         type: 3}
       propertyPath: m_RootOrder
@@ -1802,6 +1852,11 @@ PrefabInstance:
       propertyPath: BallCastPoint
       value: 
       objectReference: {fileID: 1210131404}
+    - target: {fileID: 8489003947905437726, guid: a101263fd7b4e644486a6d27d8cfd167,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a101263fd7b4e644486a6d27d8cfd167, type: 3}
 --- !u!1 &2002234200
@@ -2083,3 +2138,9 @@ Transform:
   m_Father: {fileID: 880964578}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 88.318, z: 0}
+--- !u!4 &2132664986 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8489003947905437726, guid: a101263fd7b4e644486a6d27d8cfd167,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958491461}
+  m_PrefabAsset: {fileID: 0}
