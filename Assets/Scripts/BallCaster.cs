@@ -8,7 +8,8 @@ public class BallCaster : MonoBehaviour
     public Transform BallCastPoint;
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
