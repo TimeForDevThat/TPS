@@ -916,6 +916,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 100
   HealthStatus: {fileID: 573823054}
+  InGamePlayUI: {fileID: 1968075103}
+  GameOverUI: {fileID: 1752591140}
 --- !u!1 &1347801528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,6 +1412,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648215333}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1752591140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8867804255454557178, guid: a101263fd7b4e644486a6d27d8cfd167,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958491461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1886113311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,6 +1679,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -8090424378441673956, guid: a101263fd7b4e644486a6d27d8cfd167, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a101263fd7b4e644486a6d27d8cfd167, type: 3}
+--- !u!1 &1968075103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7842520655589076422, guid: a101263fd7b4e644486a6d27d8cfd167,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958491461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2002234200
 GameObject:
   m_ObjectHideFlags: 0

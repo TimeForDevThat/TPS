@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     public float healthPoints = 100;
     public RectTransform HealthStatus;
     private float _maxHealth;
+    public GameObject InGamePlayUI;
+    public GameObject GameOverUI;
     void Start()
     {
         _maxHealth = healthPoints;
@@ -22,7 +24,11 @@ public class PlayerHealth : MonoBehaviour
         healthPoints -= Damage;
         if (healthPoints <= 0)
         {
-            Destroy(gameObject);
+            GameOverUI.SetActive(true);
+            InGamePlayUI.SetActive(false);
+            GetComponent<PlayerController>().enabled = false;
+            GetComponent<BallCaster>().enabled = false;
+            GetComponent<CamRotation>().enabled = false;
         }
         DrawHPBar();
     }
