@@ -113,6 +113,36 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2062970311205371419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153989815998314276}
+  m_Layer: 0
+  m_Name: GrenadePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &153989815998314276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062970311205371419}
+  m_LocalRotation: {x: -0.19509031, y: 0, z: 0, w: 0.98078537}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2542691688944656858}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -22.5, y: 0, z: 0}
 --- !u!1 &2875813240442633772
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +271,7 @@ GameObject:
   - component: {fileID: 2875813240927139562}
   - component: {fileID: 2952668944826066777}
   - component: {fileID: -8090424378441673956}
+  - component: {fileID: 2345495161936660098}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -348,6 +379,21 @@ MonoBehaviour:
   HealthStatus: {fileID: 8284149541653438761}
   InGamePlayUI: {fileID: 7842520655589076422}
   GameOverUI: {fileID: 8867804255454557178}
+--- !u!114 &2345495161936660098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875813240927139542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d43f86efcc96c448944e91515c99f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrenadePrefab: {fileID: 0}
+  GrenadeThrowPoint: {fileID: 153989815998314276}
+  ThrowForce: 0
 --- !u!95 &2875813240742294984
 Animator:
   serializedVersion: 3
@@ -835,7 +881,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.274, y: 0.914, z: 0.351}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 153989815998314276}
   m_Father: {fileID: 2875813240927139541}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
