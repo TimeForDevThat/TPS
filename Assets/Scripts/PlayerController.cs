@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
         _moveVector = Vector3.zero;
         _animator.SetBool("RunForward", false);
         _animator.SetBool("RunRight", false);
+        _animator.SetBool("RunBackward", false);
+        _animator.SetBool("RunLeft", false);
         if (Input.GetKey(KeyCode.W))
         {
             _moveVector += transform.forward;
@@ -45,10 +47,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             _moveVector -= transform.forward;
+            _animator.SetBool("RunBackward", true);
         }
         if (Input.GetKey(KeyCode.A))
         {
             _moveVector -= transform.right;
+            _animator.SetBool("RunLeft", true);
         }
         if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
