@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float healthPoints = 100;
+    public static float healthPoints = 100;
     public RectTransform HealthStatus;
     private float _maxHealth;
     public GameObject InGamePlayUI;

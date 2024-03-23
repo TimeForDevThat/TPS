@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScaleSpeed: 0.2
   MaxSize: 15
-  XplosionDamage: 60
+  XplosionDamage: 80
 --- !u!54 &4687716155026953540
 Rigidbody:
   m_ObjectHideFlags: 0

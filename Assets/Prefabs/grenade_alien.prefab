@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b157513e4561a2243915907d66440d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XplosionDelay: 5
+  XplosionDelay: 4
   XplosionParticlePrefab: {fileID: 1595613352495903041, guid: dca920e66dc6e9f4685f6c05ade480b8,
     type: 3}
   GrenadeTab: {fileID: 0}

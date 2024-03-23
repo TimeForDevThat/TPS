@@ -11,6 +11,8 @@ public class EnemyAI : MonoBehaviour
     public float ViewAngle;
     public float Damage = 20;
     private PlayerHealth _playerHealth;
+    public GameObject EnemyModel;
+    private Animator _enemyanimator;
     void Start()
     {
         InitComponentLinks();
@@ -27,6 +29,7 @@ public class EnemyAI : MonoBehaviour
     private void SelectPatrolPoint()
     {
         _navMeshAgent.destination = PatrolPoints [Random.Range(0, PatrolPoints.Count)].position;
+        _enemyanimator.SetBool("EnemyRunnin", true);
     }
     private void PatrolUpdate()
     {
@@ -43,6 +46,7 @@ public class EnemyAI : MonoBehaviour
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _playerHealth = Player.GetComponent<PlayerHealth>();
+        _enemyanimator = EnemyModel.GetComponent<Animator>();
     }
     private void Raycast()
     {
@@ -68,6 +72,7 @@ public class EnemyAI : MonoBehaviour
         if (_isPlayerGotNoticed)
         {
             _navMeshAgent.destination = Player.transform.position;
+            _enemyanimator.SetBool("EnemyRunnin", true);
         }
     }
     private void HeIsAttackin()
@@ -75,6 +80,7 @@ public class EnemyAI : MonoBehaviour
         if(_isPlayerGotNoticed && _navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
         {
             _playerHealth.DealDamage(Damage * Time.deltaTime);
+            _enemyanimator.SetBool("EnemyAttackin", true);
         }
     }
 }
