@@ -11,6 +11,7 @@ public class GrenadeCaster : MonoBehaviour
     public int GrenadeType = 0;
     public int GrenadeAmount = 3;
     public TextMeshProUGUI GrenadeCountText;
+    public GameObject Ship;
     void Start()
     {
         
@@ -35,5 +36,13 @@ public class GrenadeCaster : MonoBehaviour
     void GrenadeUIUpdate()
     {
         GrenadeCountText.text = GrenadeAmount.ToString();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        var GrenadesGivin = other.GetComponent<AlienGrenadesBase>();
+        if (GrenadesGivin != null)
+        {
+            GrenadeAmount += GrenadesGivin.AmountToGive;
+        }
     }
 }

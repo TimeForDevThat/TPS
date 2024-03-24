@@ -7,6 +7,7 @@ public class XplosionControl : MonoBehaviour
     public float ScaleSpeed = 1;
     public float MaxSize = 4;
     public float XplosionDamage = 60;
+    public float XplosionDamageToPlayer = 20;
     void Start()
     {
         
@@ -30,7 +31,7 @@ public class XplosionControl : MonoBehaviour
         var PlayerHealth = other.GetComponent<PlayerHealth>();
         if(PlayerHealth != null)
         {
-            PlayerHealth.DealDamage(XplosionDamage);
+            PlayerHealth.DealDamage(XplosionDamageToPlayer);
         }
         var EnemyHealth = other.GetComponent<EnemyHealth>();
         if (EnemyHealth != null)

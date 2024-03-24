@@ -82,5 +82,9 @@ public class EnemyAI : MonoBehaviour
             _playerHealth.DealDamage(Damage * Time.deltaTime);
             _enemyanimator.SetBool("EnemyAttackin", true);
         }
+        if (_isPlayerGotNoticed && _navMeshAgent.remainingDistance >= _navMeshAgent.stoppingDistance)
+        {
+            _enemyanimator.SetBool("EnemyAttackin", false);
+        }
     }
 }

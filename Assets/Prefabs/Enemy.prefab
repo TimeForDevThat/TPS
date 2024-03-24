@@ -73,9 +73,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Player: {fileID: 0}
   ViewAngle: 70
-  Damage: 20
+  Damage: 10
   EnemyModel: {fileID: 6640699571756937202}
 --- !u!114 &5287591973766158116
 MonoBehaviour:
@@ -90,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 100
+  DefeatObject: {fileID: 7080372957952620517, guid: a89d8df5def24d84e83fa4e7c9f77179,
+    type: 3}
 --- !u!136 &5287591973766158119
 CapsuleCollider:
   m_ObjectHideFlags: 0

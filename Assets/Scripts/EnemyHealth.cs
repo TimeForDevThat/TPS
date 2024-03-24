@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyHealth : MonoBehaviour
 {
     public float healthPoints = 100; //Still, gives no attention lul
+    public GameObject DefeatObject;
     void Start()
     {
 
@@ -14,6 +16,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (healthPoints <= 0)
         {
+            DefeatObject.transform.position = transform.position;
+            Instantiate(DefeatObject);
             Destroy(gameObject);
         }
     }
