@@ -13,7 +13,6 @@ public class XplosionControl : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.localScale += Vector3.one * ScaleSpeed;

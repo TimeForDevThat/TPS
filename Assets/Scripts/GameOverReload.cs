@@ -14,7 +14,7 @@ public class GameOverReload : MonoBehaviour
     {
         WhenButtonPressed();  
     }
-    void WhenButtonPressed()
+    public void WhenButtonPressed()
     {
         if(Input.GetKey(KeyCode.R))
         {

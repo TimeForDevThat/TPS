@@ -49,7 +49,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -95,6 +95,7 @@ MonoBehaviour:
   healthPoints: 100
   DefeatObject: {fileID: 7080372957952620517, guid: a89d8df5def24d84e83fa4e7c9f77179,
     type: 3}
+  Player: {fileID: 2875813240927139542, guid: a101263fd7b4e644486a6d27d8cfd167, type: 3}
 --- !u!136 &5287591973766158119
 CapsuleCollider:
   m_ObjectHideFlags: 0

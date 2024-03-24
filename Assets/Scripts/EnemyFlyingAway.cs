@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyFlyingAway : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject Player;
     void Start()
     {
         Invoke("Disappear", 20); 

@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 _moveVector;
     private Animator _animator;
     public GameObject PlayerModel;
+    //public int GameTarget = 2; //unused, didnt work
+    //public int WayToTarget; //unused, didnt work
+    public GameObject GameFinishSpot;
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
@@ -59,4 +62,18 @@ public class PlayerController : MonoBehaviour
             _fallVelocity = -JumpForce;
         }
     }
+    void OnTriggerEnter(Collider finish)
+        {
+            var gameFinish = finish.GetComponent<GameFinish>();
+            if (gameFinish != null)
+            {
+                gameFinish.GameFinishedUI();
+                Destroy(gameObject);
+            }
+        }
+    public void PlayerDel()
+    {
+        Destroy(gameObject);
+    }
+
 }

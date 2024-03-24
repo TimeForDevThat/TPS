@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public float healthPoints = 100; //Still, gives no attention lul
     public GameObject DefeatObject;
+    public GameObject Player;
     void Start()
     {
 
@@ -14,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Update()
     {
+
         if (healthPoints <= 0)
         {
             DefeatObject.transform.position = transform.position;
