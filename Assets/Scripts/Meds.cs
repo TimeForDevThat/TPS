@@ -6,6 +6,7 @@ public class Meds : MonoBehaviour
 {
     public float HPToHeal = 50;
     public GameObject PhysicCollider;
+    public GameObject Player;
     void Start()
     {
 
@@ -13,20 +14,22 @@ public class Meds : MonoBehaviour
 
     void Update()
     {
-        PhysCheck();
+        //PhysCheck();
     }
     private void OnTriggerEnter(Collider other)
     {
-        var PlayerHealth = other.GetComponent<PlayerHealth>();
-        if(PlayerHealth != null && PlayerHealth.healthPoints < 100)
+        var PlayerHealthPoints = other.GetComponent<PlayerHealth>().healthPoints;
+        var PlayerHealthComp = other.GetComponent<PlayerHealth>();
+        if(PlayerHealthComp != null && PlayerHealthPoints < 100)
         {
-            PlayerHealth.AddHP(HPToHeal);
+            PlayerHealthComp.AddHP(HPToHeal);
             Destroy(gameObject);
         }  
     }
     void PhysCheck()
     {
-        if (PlayerHealth.healthPoints < 100)
+        var PlayerHealthPoints = Player.GetComponent<PlayerHealth>().healthPoints;
+        if (PlayerHealthPoints < 100)
         {
             Destroy(PhysicCollider);
         }

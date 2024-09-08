@@ -68,12 +68,6 @@ public class PlayerController : MonoBehaviour
             if (gameFinish != null)
             {
                 gameFinish.GameFinishedUI();
-                Destroy(gameObject);
             }
         }
-    public void PlayerDel()
-    {
-        Destroy(gameObject);
-    }
-
 }

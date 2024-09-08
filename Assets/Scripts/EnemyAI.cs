@@ -53,6 +53,7 @@ public class EnemyAI : MonoBehaviour
         var Direction = Player.transform.position - transform.position;
         
         _isPlayerGotNoticed = false;
+        _enemyanimator.SetBool("EnemyAttackin", false);
         if (Vector3.Angle(transform.forward, Direction)< ViewAngle)
         {
 
